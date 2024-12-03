@@ -12,6 +12,15 @@ x = x.reshape(-1,1)
 
 # Create the model
 
+plt.figure(figsize=(6,4))
+
+# creates a scatter plot and labels the axes
+plt.scatter(x,y)
+plt.xlabel("Age")
+plt.ylabel("Blood Pressure")
+plt.title("Blood pressure by age graph")
+
+
 # Find the coefficient, bias, and r squared values. 
 # Each should be a float and rounded to two decimal places. 
 
@@ -22,3 +31,5 @@ x = x.reshape(-1,1)
 # Print out the prediction
 
 # Create the model in matplotlib and include the line of best fit
+
+plt.show()
