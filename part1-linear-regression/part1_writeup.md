@@ -10,7 +10,7 @@ The r squared value is 0.626. This tells me that the linear regression model is 
 
 2. According to your model, what is the predicted systolic blood pressure for a person who is 42 years old?
 
-The predicted systolic blood pressure fora person who is 42 is about 136.5
+The predicted systolic blood pressure for a person who is 42 is about 136.5
 
 3. How accurate do you think this model's predictions are?  Do you think this model is accurate enough to reliably predict someone's blood pressure based on their age?  Why or why not?  And if not, what could improve the model?
 
