@@ -52,7 +52,11 @@ predict = np.around(predict,2)
 
 # Test the model by looping through all of the values in the xtest dataset
 print("\nTesting Linear Model with Testing Data:")
-
+for index in range(len(xtest)):
+    actual = ytest[index] # gets the actual y value from the ytest dataset
+    predicted_y = predict[index] # gets the predicted y value from the predict variable
+    x_coord = xtest[index] # gets the x value from the xtest dataset
+    print("x value:", float(x_coord[0]), "Predicted y value:", predicted_y, "Actual y value:", actual)
 
 '''
 **********CREATE A VISUAL OF THE RESULTS**********
