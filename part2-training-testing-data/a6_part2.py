@@ -21,6 +21,7 @@ xtrain, xtest, ytrain, ytest = train_test_split(x,y,test_size = .2)
 # Use reshape to turn the x values into 2D arrays:
 
 x = x.reshape(-1,1)
+xtrain=xtrain.reshape(-1,1)
 
 # Create the model
 
