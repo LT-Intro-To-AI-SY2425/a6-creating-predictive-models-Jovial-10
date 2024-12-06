@@ -25,7 +25,7 @@ xtrain=xtrain.reshape(-1,1)
 
 # Create the model
 
-model=LinearRegression().fit(x,y)
+model=LinearRegression().fit(xtrain,ytrain)
 
 # Find the coefficient, bias, and r squared values. 
 # Each should be a float and rounded to two decimal places. 
