@@ -16,6 +16,7 @@ y = data["Blood Pressure"].values
 
 xtrain= data["Age"].values
 ytrain=data["Blood Pressure"].values
+xtrain, xtest, ytrain, ytest = train_test_split(x,y,test_size = .2)
 
 # Use reshape to turn the x values into 2D arrays:
 
@@ -56,3 +57,19 @@ print("\nTesting Linear Model with Testing Data:")
 '''
 **********CREATE A VISUAL OF THE RESULTS**********
 '''
+
+plt.figure(figsize=(5,4))
+
+#creates a scatter plot and labels the axes
+plt.scatter(xtrain,ytrain, c="purple", label="Training Data")
+plt.scatter(xtest, ytest, c="blue", label="Testing Data")
+
+plt.scatter(xtest, predict, c="red", label="Predictions")
+
+plt.xlabel("Age")
+plt.ylabel("Blood Pressure")
+plt.title("Blood Pressure by Age")
+plt.plot(x, coef*x + intercept, c="r", label="Line of Best Fit")
+
+plt.legend()
+plt.show()
