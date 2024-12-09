@@ -33,12 +33,13 @@ model=LinearRegression().fit(xtrain,ytrain)
 coef=round(float(model.coef_[0]),2)
 intercept = round(float(model.intercept_), 2)
 r_squared = model.score(xtrain, ytrain)
-
+r_squared1= model.score(x,y)
 
 # Print out the linear equation and r squared value:
 
 print("Model's Linear Equation: y=", coef, "x+", intercept)
 print("R Squared value:", r_squared)
+print("R Squared value:", r_squared1)
 
 '''
 **********TEST THE MODEL**********
