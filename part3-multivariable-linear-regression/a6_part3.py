@@ -30,7 +30,7 @@ print("Testing Results")
 predict= model.predict(xtest)
 
 predict=np.around(predict,2)
-print
+print(predict)
 
 print("\nTesting Multivariable Model with Testing Data:")
 for index in range(len(xtest)):
