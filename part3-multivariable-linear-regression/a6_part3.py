@@ -18,9 +18,12 @@ model = LinearRegression().fit(xtrain, ytrain)
 #Find and print the coefficients, intercept, and r squared values. 
 #Each should be rounded to two decimal places. 
 
-coef=np.round(model.coef , 2)
+coef =np.round(model.coef_, 2)
 intercept = round(float(model.intercept_), 2)
-r_squared=round(model.score(x,y),2)
+r_squared=round(model.score(xtest,ytest),2)
+
+print("R squared value: ")
+print(r_squared)
 
 #Loop through the data and print out the predicted prices and the 
 #actual prices
@@ -37,4 +40,4 @@ for index in range(len(xtest)):
     actual = ytest[index] # gets the actual y value from the ytest dataset
     predicted_y = predict[index] # gets the predicted y value from the predict variable
     x_coord = xtest[index] # gets the x value from the xtest dataset
-    print(f"Miles Driven: {x_coord[0]} Age: {x_coord[1]}Price: {x_coord[2]} Actual: {actual} Predicted: {predicted_y}")
+    print(f"Miles Driven: {x_coord[0]} Age: {x_coord[1]} Actual: {actual} Predicted: {predicted_y}")
