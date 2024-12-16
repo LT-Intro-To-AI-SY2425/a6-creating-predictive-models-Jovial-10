@@ -32,8 +32,24 @@ print("Testing Results")
 
 predict= model.predict(xtest)
 
+# x_predict = 89000
+# x_predicttwo = 10
+# # plug that value into your model
+# prediction = model.predict([[x_predict], [x_predicttwo]])
+
+# print("Prediction", prediction)
+
 predict=np.around(predict,2)
 print(predict)
+
+car1 = np.array([[89000, 10]])  # 10-year-old car with 89,000 miles
+car2 = np.array([[150000, 20]])  # 20-year-old car with 150,000 miles
+
+predicted_price1 = model.predict(car1)[0]
+predicted_price2 = model.predict(car2)[0]
+
+print(f"Predicted price for 10-year-old car with 89,000 miles: ${round(predicted_price1, 2)}")
+print(f"Predicted price for 20-year-old car with 150,000 miles: ${round(predicted_price2, 2)}")
 
 print("\nTesting Multivariable Model with Testing Data:")
 for index in range(len(xtest)):
