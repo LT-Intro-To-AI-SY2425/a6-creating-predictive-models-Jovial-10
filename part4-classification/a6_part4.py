@@ -42,3 +42,30 @@ print("\n*************")
 
 # Step 8: Print out the actual ytest values and predicted y values
 # based on the xtest data
+
+print("Testing Results:")
+print("")
+print(y_test)
+for index in range(len(x_test)):
+    x = x_test[index]
+    x = x.reshape(-1, 3)
+    print(x)
+    y_pred = int(model.predict(x))
+
+    if y_pred == 0:
+        y_pred = "0"
+    elif y_pred == 1:
+        y_pred = "1"
+    else:
+        y_pred = "0"
+    
+    actual = y_test[index]
+    if actual == 0:
+        actual = "0"
+    elif actual == 1:
+        actual = "1"
+    else:
+        actual = "1"
+    print("Predicted Species: " + y_pred + " Actual Species: " + actual)
+    print("")
+
