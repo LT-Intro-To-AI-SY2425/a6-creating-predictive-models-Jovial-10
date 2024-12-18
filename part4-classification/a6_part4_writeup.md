@@ -19,4 +19,4 @@ Most of the predicted and actual results were the same, with one or two predicit
 
 4. Would a 34 year old Female who makes 56000 a year buy an SUV according to the model? Remember to scale the data before running it through the model.
 
-No, the 34 year old female who mankes 56,000 a year would not be likely to buy an SUV.
+No, the 34 year old female who makes 56,000 a year would not be likely to buy an SUV.
