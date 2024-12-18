@@ -26,10 +26,6 @@ x=scaler.transform(x)
 
 x_train, x_test, y_train, y_test = train_test_split(x,y)
 
-# Step 5: Fit the data
-
-
-
 # Step 6: Create a LogsiticRegression object and fit the data
 
 model = linear_model.LogisticRegression().fit(x_train, y_train)
@@ -69,3 +65,16 @@ for index in range(len(x_test)):
     print("Predicted Species: " + y_pred + " Actual Species: " + actual)
     print("")
 
+
+new_data = [[34, 56000, 1]]  
+
+
+new_data_scaled = scaler.transform(new_data)
+
+
+y_pred_new = model.predict(new_data_scaled)
+
+if y_pred_new[0] == 0:
+    print("The person is not likely to buy an SUV.")
+else:
+    print("The person is likely to buy an SUV.")
